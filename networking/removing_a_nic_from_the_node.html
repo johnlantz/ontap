@@ -1,0 +1,3875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="at-element-marker">
+  <title>Removing a NIC from the node on ONTAP 9.8 or later</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Removing a NIC from the node on ONTAP 9.8 or later" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap/networking/removing_a_nic_from_the_node.html" />
+	<meta property="og:description" content="ONTAP 9.8 and later, remove a faulty NIC from its slot or move the NIC to another slot for maintenance purposes" />
+  <meta property="og:image" content="https://docs.netapp.com/us-en/ontap/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="ONTAP 9.8 and later, remove a faulty NIC from its slot or move the NIC to another slot for maintenance purposes">
+  <meta name="keywords" content=" delete, deleting, remove, removing, nic, network, interface, card, slot, maintenance, faulty, error, bad, failed, fail, node">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/us-en/ontap/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/us-en/ontap/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/us-en/ontap/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/us-en/ontap/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/us-en/ontap/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/us-en/ontap/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/us-en/ontap/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/us-en/ontap/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/us-en/ontap/css/astra.css" type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/us-en/ontap/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/us-en/ontap/js/na-search.js'></script>
+  
+
+  
+  <script src='/us-en/ontap/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/us-en/ontap/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/us-en/ontap/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/us-en/ontap/js/na-utility.js'></script>
+  <script src='/us-en/ontap/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/us-en/ontap/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/us-en/ontap/js/toc.js'></script>
+  <script src='/us-en/ontap/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Product and Solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support and Training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Customer Stories</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/us-en/ontap/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/us-en/ontap/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/us-en/ontap/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" data-type="widget" data-placeholder="Search Documentation" data-no-results-found="No results were found for {query}" data-did-you-mean="Search for {suggestion}." data-no-results-found-did-you-mean="No results found for {query}. Did you mean {suggestion}?" data-results-found="{hitCount} results found"  ></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar"><!-- Start Language Selector --><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">Home</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">Documentation</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/us-en/ontap/">ONTAP&nbsp;9</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          Removing a NIC from the node on ONTAP 9.8 or later
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDFs<span>
+    </span>
+  </a>
+</div>
+<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
+      <span class="n-pdf-section-title">Site</span>
+    </div>
+    <li>
+      <a target="_blank" href="/us-en/ontap/pdfs/fullsite-sidebar/ONTAP_9_Documentation.pdf" >
+        <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+        ONTAP 9 Documentation
+      </a>
+    </li>
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Configure_ONTAP.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Configure ONTAP
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Set_up_a_cluster_with_the_ONTAP_CLI.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Set up a cluster with the ONTAP CLI
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Synchronize_the_system_time_across_the_cluster.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Synchronize the system time across the cluster
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Decide_where_to_send_important_event_notifications.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Decide where to send important event notifications
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Upgrade_cluster.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Upgrade cluster
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/How_do_I_plan_my_upgrade_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            How do I plan my upgrade?
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Without_Upgrade_Advisor.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Without Upgrade Advisor
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/What_should_I_verify_before_I_upgrade_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            What should I verify before I upgrade?
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/What_should_I_check_before_I_upgrade_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            What should I check before I upgrade?
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Special_considerations.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Special considerations
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/MetroCluster_configurations.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            MetroCluster configurations
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/SnapMirror.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            SnapMirror
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Which_upgrade_method_should_I_use_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Which upgrade method should I use?
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Automated_nondisruptive_using_System_Manager.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Automated nondisruptive using System Manager
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Automated_nondisruptive_using_the_CLI.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Automated nondisruptive using the CLI
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Manual_nondisruptive_using_the_CLI.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Manual nondisruptive using the CLI
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/MCC_configurations.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            MCC configurations
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/What_should_I_do_after_my_upgrade_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            What should I do after my upgrade?
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Verify_special_configurations.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Verify special configurations
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Revert_cluster.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Revert cluster
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/What_should_I_read_before_I_revert_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            What should I read before I revert?
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/What_else_should_I_check_before_I_revert_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            What else should I check before I revert?
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/SnapMirror.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            SnapMirror
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/What_should_I_do_after_reverting_my_cluster_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            What should I do after reverting my cluster?
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Network_management.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Network management
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Set_up_NAS_path_failover__ONTAP_9_8_and_later_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Set up NAS path failover (ONTAP 9.8 and later)
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Workflow_NAS_path_failover.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Workflow NAS path failover
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Set_up_NAS_path_failover__ONTAP_9_0_9_7_CLI_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Set up NAS path failover (ONTAP 9.0-9.7 CLI)
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Workflow_NAS_path_failover.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Workflow NAS path failover
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/ONTAP_9_Networking_Reference.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            ONTAP 9 Networking Reference
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Upgrade_considerations.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Upgrade considerations
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Networking_components_of_a_cluster.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Networking components of a cluster
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Configure_network_ports__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Configure network ports (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="n-pdf-section">
+  <span class="n-pdf-section-title">This page</span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/us-en/ontap/pdfs/pages/networking/removing_a_nic_from_the_node.pdf" >
+    <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+    Removing a NIC from the node on ONTAP 9.8 or later
+  </a>
+</li>
+
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Configure_IPspaces__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Configure IPspaces (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/ONTAP_9_8_and_later_Configure_broadcast_domains__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            ONTAP 9.8 and later-Configure broadcast domains (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/ONTAP_9_7_and_earlier_Configure_broadcast_domains__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            ONTAP 9.7 and earlier-Configure broadcast domains (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Configure_failover_groups_and_policies_for_LIFs.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Configure failover groups and policies for LIFs
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Configure_subnets__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Configure subnets (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Configure_LIFs__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Configure LIFs (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Configure_host_name_resolution.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Configure host-name resolution
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Balance_network_loads_to_optimize_user_traffic__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Balance network loads to optimize user traffic (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Secure_your_network.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Secure your network
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Configure_QoS_marking__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Configure QoS marking (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Manage_SNMP_on_the_cluster__cluster_administrators_only_.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Manage SNMP on the cluster (cluster administrators only)
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Manage_routing_in_an_SVM.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Manage routing in an SVM
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/ONTAP_port_usage_on_a_storage_system.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            ONTAP port usage on a storage system
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/View_network_information.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            View network information
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/High_availability.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            High availability
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/SnapMirror_Business_Continuity.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            SnapMirror Business Continuity
+          </a>
+        </li>
+        <span>
+          
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Introduction.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Introduction
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Planning.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Planning
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Installation_and_setup.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Installation and setup
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Administration.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Administration
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Troubleshooting.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Troubleshooting
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Provision_SAN_storage.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Provision SAN storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/SnapMirror_Business_Continuity_overview.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            SnapMirror Business Continuity overview
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Provision_NVMe_storage.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Provision NVMe storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Provision_NAS_storage.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Provision NAS storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Monitor_volume_usage_with_ONTAP_File_System_Analytics.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Monitor volume usage with ONTAP File System Analytics
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Enable_NAS_storage.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Enable NAS storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Provision_object_storage.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Provision object storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Manage_resources_using_quotas.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Manage resources using quotas
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Maximize_security.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Maximize security
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Protect_data.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Protect data
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Extend_to_the_cloud.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Extend to the cloud
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/View_cluster_performance.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            View cluster performance
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Day_to_day_administration.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Day-to-day administration
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Manage_MetroCluster_sites.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Manage MetroCluster sites
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Manage_storage.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Manage storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Expand_storage.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Expand storage
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              Sections
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" href="/us-en/ontap/pdfs/sidebar/Rest_API.pdf" >
+            <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>
+            Rest API
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+</ul>
+
+<script>
+  $("#toggleContainerPdf li.active").parents('li').toggle('display');
+  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+  });
+</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/index.html">
+        ONTAP home
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/concept_key_ontap.html">
+        Key ONTAP concepts
+      </a></li><li class="subfolders "><a href="/us-en/ontap/task_configure_ontap.html"">
+        <div class="na-navbar-padding"> Configure ONTAP</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_decide_whether_to_use_ontap_cli.html">
+        Decide whether to use the ONTAP CLI for cluster setup
+      </a></li><li class="subfolders "><a href="/us-en/ontap/software_setup/concept_set_up_the_cluster.html">
+        <div class="na-navbar-padding"> Set up a cluster with the ONTAP CLI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/task_create_the_cluster_on_the_first_node.html">
+        Create the cluster on the first node
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/task_join_remaining_nodes_to_the_cluster.html">
+        Join remaining nodes to the cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/task_check_cluster_with_config_advisor.html">
+        Check your cluster with Active IQ Config Advisor
+      </a></li><li class="subfolders "><a href="/us-en/ontap/software_setup/task_synchronize_the_system_time_across_the_cluster.html">
+        <div class="na-navbar-padding"> Synchronize the system time across the cluster</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/reference_commands_for_managing_ntp_servers.html">
+        Commands for managing symmetric authentication on NTP servers
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/software_setup/task_decide_where_to_send_important_event_notifications.html">
+        <div class="na-navbar-padding"> Decide where to send important event notifications</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/task_configure_important_ems_events_to_send_email_notifications.html">
+        Configure important EMS events to send email notifications
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/task_configure_important_ems_events_to_forward_notifications_to_a_syslog_server.html">
+        Configure important EMS events to forward notifications to a syslog server
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/task_configure_snmp_traphosts_to_receive_event_notifications.html">
+        Configure SNMP traphosts to receive event notifications
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/software_setup/concept_additional_system_configuration_tasks_to_complete.html">
+        Additional system configuration tasks to complete
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/upgrade/index.html">
+        <div class="na-navbar-padding"> Upgrade cluster</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_upgrade_paths.html">
+        Upgrade Paths
+      </a></li><li class="subfolders "><a href="/us-en/ontap/upgrade/concept_how_to_plan_upgrade.html">
+        <div class="na-navbar-padding"> How do I plan my upgrade?</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_plan_with_upgrade_advisor.html">
+        With Upgrade Advisor
+      </a></li><li class="subfolders "><a href="/us-en/ontap/upgrade/task_plan_without_upgrade_advisor.html">
+        <div class="na-navbar-padding"> Without Upgrade Advisor</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_reviewing_pre_update_resources.html">
+        What should I read before I upgrade?
+      </a></li><li class="subfolders "><a href="/us-en/ontap/upgrade/task_what_to_verify_before_upgrade.html">
+        <div class="na-navbar-padding"> What should I verify before I upgrade?</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_cluster_upgrade_limits.html">
+        Cluster upgrade limits
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_identifying_current_cluster_activity.html">
+        Current cluster activity
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html">
+        How firmware is updated during upgrade
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/upgrade/task_what_to_check_before_upgrade.html">
+        <div class="na-navbar-padding"> What should I check before I upgrade?</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_cluster_health_verifying_that_the_cluster_is_ready.html">
+        Cluster health
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_storage_health_verifying_that_the_cluster_is_ready.html">
+        Storage health
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_verify_svm_routing.html">
+        SVM routing configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_the_lif_failover_configuration.html">
+        LIF failover configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verify_status.html">
+        Status
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_preparing_the_ontap_software_for_the_update.html">
+        All LIFs are on home ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_check_for_common_configuration_errors_using_config_advisor.html">
+        Common configuration errors
+      </a></li><li class="subfolders "><a href="/us-en/ontap/upgrade/concept_pre_upgrade_checks.html">
+        <div class="na-navbar-padding"> Special considerations</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_mixed_version_requirements.html">
+        Mixed version clusters
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_the_san_configuration.html">
+        SAN configurations
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> MetroCluster configurations</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_upgrade_requirements_for_metrocluster_configurations.html">
+        Upgrade requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_the_networking_and_storage_status_for_metrocluster_cluster_is_ready.html">
+        Network and storage status
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_upgrade_considerations_for_root_data_partitioning.html">
+        Advanced Data Partitioning
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_that_deduplicated_volumes_and_aggregates_contain_sufficient_free_space.html">
+        Deduplicated volumes and aggregates
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapMirror</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_upgrade_requirements_for_snapmirror.html">
+        Upgrade requirements
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_snapmirror_relationships_for_a_nondisruptive_upgrade_or_downgrade.html">
+        Prepare SnapMirror relationships
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_upgrade_considerations_for_snaplock.html">
+        SnapLock
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html">
+        Load-sharing mirrors
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_preparing_to_upgrade_nodes_using_netapp_storage_encryption_with_external_key_management_servers.html">
+        NetApp Storage Encryption
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_that_the_netgroup_file_is_present_on_all_nodes.html">
+        Netgroups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_configuring_ldap_clients_to_use_tls_for_highest_security.html">
+        LDAP clients using SSLv3
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html">
+        Session-oriented protocols
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_download_and_install_ontap_software_image.html">
+        How do I get and install the upgrade software image?
+      </a></li><li class="subfolders "><a href="/us-en/ontap/upgrade/concept_upgrade_methods.html">
+        <div class="na-navbar-padding"> Which upgrade method should I use?</div>
+      </a>
+      <ul><li class="subfolders "><a href="/us-en/ontap/upgrade/task_upgrade_andu_sm.html">
+        <div class="na-navbar-padding"> Automated nondisruptive using System Manager</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_resuming_an_upgrade_after_an_error_in_the_automated_upgrade_process.html">
+        Resuming upgrade using System Manager after error in automated upgrade
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/upgrade/task_upgrade_andu_cli.html">
+        <div class="na-navbar-padding"> Automated nondisruptive using the CLI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_resuming_an_upgrade_using_the_cli_after_an_error_in_the_automated_upgrade_process.html">
+        Resuming upgrade using the CLI after error in automated upgrade
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_upgrade_disruptive_automated_cli.html">
+        Automated disruptive using the CLI
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manual nondisruptive using the CLI</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_upgrade_nondisruptive_manual_cli.html">
+        Non-MCC configurations
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> MCC configurations</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_updating_a_four_or_eight_node_mcc.html">
+        4 or 8 node
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_updating_a_two_node_metrocluster_configuration_in_ontap_9_2_and_earlier.html">
+        2-node 9.2 or earlier
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_updating_an_ontap_cluster_disruptively.html">
+        Manual disruptive using the CLI
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/upgrade/task_what_to_do_after_upgrade.html">
+        <div class="na-navbar-padding"> What should I do after my upgrade?</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verify_cluster_after_upgrade.html">
+        Verify your cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_post_upgrade.html">
+        Verify all LIFs are on home ports
+      </a></li><li class="subfolders "><a href="/us-en/ontap/upgrade/concept_special_configurations_post_checks.html">
+        <div class="na-navbar-padding"> Verify special configurations</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_your_network_configuration_after_upgrade.html">
+        Verify your network configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_the_networking_and_storage_status_for_metrocluster_post_upgrade.html">
+        Verify your networking and storage status
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_verifying_the_san_configuration_after_an_upgrade.html">
+        Verify your SAN configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_reconfiguring_kmip_servers_connections_after_upgrading_to_ontap_9_3_or_later.html">
+        Reconfigure KMIP server connections
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_relocating_moved_load_sharing_mirror_source_volumes.html">
+        Relocate moved load-sharing mirror source volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_resuming_snapmirror_operations.html">
+        Resume SnapMirror operations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_setting_the_desired_nt_acl_permissions_display_level_for_nfs_clients.html">
+        Set the desired NT ACL permissions display level for NFS clients
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/task_enforcing_sha_2_on_user_account_passwords_dot_9_0_upgrade_guide.html">
+        Enforce SHA-2 on administrator passwords
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/upgrade/concept_when_you_need_to_update_the_disk_qualification_package.html">
+        Update the DQP
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/revert/index.html">
+        <div class="na-navbar-padding"> Revert cluster</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/concept_when_to_call_technical_support.html">
+        Do I need technical support?
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/concept_revert_paths.html">
+        What are the revert paths?
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> What should I read before I revert?</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_reviewing_pre_reversion_resources.html">
+        Pre-reversion resources
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/concept_revert_process_considerations.html">
+        Revert considerations
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_things_to_verify_before_revert.html">
+        What should I verify before I revert?
+      </a></li><li class="subfolders "><a href="/us-en/ontap/revert/concept_pre_revert_checks.html">
+        <div class="na-navbar-padding"> What else should I check before I revert?</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SnapMirror</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/concept_consideration_for_reverting_systems_with_snapmirror_synchronous_relationships.html">
+        SnapMirror Synchronous relationships
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/concept_reversion_requirements_for_snapmirror_and_snapvault_relationships.html">
+        SnapMirror/SnapVault relationships
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_setting_autocommit_periods_for_snaplock_volumes_before_reverting.html">
+        SnapLock
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_reverting_the_physical_block_sharing_in_split_flexclone_volumes.html">
+        Split FlexClone volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_disabling_qtrees_in_flexgroup_volumes_before_reverting.html">
+        FlexGroup volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_identifying_and_moving_cifs_servers_in_workgroup_mode.html">
+        CIFS servers in workgroup mode
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_reverting_systems_with_deduplicated_volumes.html">
+        Deduplicated volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_disable_asuo.html">
+        2 or 4-node MetroCluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_preparing_snapshot_copies_before_reverting.html">
+        Snapshot copies
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_download_and_install_ontap_software_image.html">
+        How do I get and install the revert software image?
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_reverting_an_ontap_cluster.html">
+        Revert my cluster
+      </a></li><li class="subfolders "><a href="/us-en/ontap/revert/task_things_to_verify_after_downgrade_revert.html">
+        <div class="na-navbar-padding"> What should I do after reverting my cluster?</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_verify_health.html">
+        Verify cluster and storage health
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_enabling_automatic_switchover_for_metrocluster_configurations.html">
+        Enable automatic switchover for MetroCluster configurations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_enabling_and_reverting_lifs_to_home_ports_completing_post_reversion_tasks.html">
+        Enable and revert LIFs to home ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_preparing_snapshot_copies_after_reverting.html">
+        Enable Snapshot copy policies
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_verifying_client_access_cifs_and_nfs.html">
+        Verify client access (CIFS and NFS)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_verifying_ipv6_firewall_entries.html">
+        Verify IPv6 firewall entries
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/task_reverting_password_hash_function.html">
+        Revert password hash function
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/revert/concept_support_of_sp_firmware_automatic_revert.html">
+        Maually update SP firmware
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/networking/index.html">
+        <div class="na-navbar-padding"> Network management</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/concept_admin_viewing_managing_network.html">
+        View and manage your network
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/concept_admin_downloading_data_report.html">
+        Download network data for reporting
+      </a></li><li class="subfolders "><a href="/us-en/ontap/networking/set_up_nas_path_failover_98_and_later_cli.html">
+        <div class="na-navbar-padding"> Set up NAS path failover (ONTAP 9.8 and later)</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Workflow NAS path failover</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/workflow__nas_path_failover_overview_auto.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/worksheet_for_nas_path_failover_configuration_auto.html">
+        Worksheet for NAS path failover configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_ipspaces.html">
+        Create IPspaces
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/move_broadcast_domains.html">
+        Move broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/repair_port_reachability.html">
+        Repair port reachability
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_svms.html">
+        Create SVMs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_lifs.html">
+        Create LIFs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_dns_services_auto.html">
+        Configure DNS services
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/get_more_information.html">
+        Get more information
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/networking/set_up_nas_path_failover_9_to_97_cli.html">
+        <div class="na-navbar-padding"> Set up NAS path failover (ONTAP 9.0-9.7 CLI)</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Workflow NAS path failover</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/workflow__nas_path_failover_overview_manual.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/worksheet_for_nas_path_failover_configuration_manual.html">
+        Worksheet for NAS path failover configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_ipspaces.html">
+        Create IPspaces
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/determine_which_ports_can_be_used_for_a_broadcast_domains.html">
+        Determine which ports can be used for a broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/remove_ports_from_a_broadcast_domain.html">
+        Remove ports from a broadcast domain
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_a_broadcast_domain.html">
+        Create a broadcast domain
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_a_subnet.html">
+        Create a subnet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_svms.html">
+        Create SVMs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_lifs.html">
+        Create LIFs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_dns_services.html">
+        Configure DNS services
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_dynamic_dns_services_manual.html">
+        Configure dynamic DNS services
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/get_more_information.html">
+        Get more information
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/networking/networking_reference.html">
+        <div class="na-navbar-padding"> ONTAP 9 Networking Reference</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Upgrade considerations</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/network_features_by_release.html">
+        Network features by release
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/verify_your_network_configuration.html">
+        Verify your networking configuration after upgrading to ONTAP 9.8 or later
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Networking components of a cluster</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/networking_components_of_a_cluster_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/network_cabling_guidelines.html">
+        Network cabling guidelines
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/relationship_between_broadcast_domains.html">
+        Relationship between broadcast domains, failover groups, and failover policies
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configure network ports (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_network_ports_@cluster_administrators_only@_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/types_of_network_ports.html">
+        Types of network ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html">
+        Combine physical ports to create interface groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_vlans_over_physical_ports.html">
+        Configure VLANs over physical ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/modify_network_port_attributes.html">
+        Modify network port attributes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/modify_mtu_setting_for_interface_group_ports.html">
+        Modify MTU setting for interface group ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/monitor_the_health_of_network_ports.html">
+        Monitor the health of network ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/monitor_the_reachability_of_network_ports.html">
+        Monitor the reachability of network ports in ONTAP 9.8 and later
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/convert_40gbe_nic_ports_into_multiple_10gbe_ports_for_10gbe_connectivity.html">
+        Convert 40GbE NIC ports into multiple 10GbE ports for 10GbE connectivity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/remove_a_nic_from_the_node_97.html">
+        Removing a NIC from the node on ONTAP 9.7 or earlier
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/us-en/ontap/networking/removing_a_nic_from_the_node.html">
+        Removing a NIC from the node on ONTAP 9.8 or later
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configure IPspaces (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_ipspaces_@cluster_administrators_only@_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_ipspaces.html">
+        Example of using IPspaces
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/standard_properties_of_ipspaces.html">
+        Standard properties of IPspaces
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_ipspaces_01.html">
+        Create IPspaces
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_ipspaces.html">
+        Display IPspaces
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/delete_an_ipspace.html">
+        Delete an IPspace
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP 9.8 and later-Configure broadcast domains (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_broadcast_domains_@cluster_administrators_only@_overview.html">
+        Overview for ONTAP 9.8 and later
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains.html">
+        Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html">
+        Add or remove ports from a broadcast domain
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains.html">
+        Split broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/merge_broadcast_domains.html">
+        Merge broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/change_the_mtu_value_for_ports_in_a_broadcast_domain.html">
+        Change the MTU value for ports in a broadcast domain
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_broadcast_domains.html">
+        Display broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/delete_a_broadcast_domain.html">
+        Delete a broadcast domain
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP 9.7 and earlier-Configure broadcast domains (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_broadcast_domains_97_overview.html">
+        Overview for ONTAP 9.7 and earlier
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/example_of_using_broadcast_domains_97.html">
+        Example of using broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_a_broadcast_domain97.html">
+        Create a broadcast domain
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain97.html">
+        Add or remove ports from a broadcast domain
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/split_broadcast_domains97.html">
+        Split broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/merge_broadcast_domains97.html">
+        Merge broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/change_the_mtu_value_for_ports_in_a_broadcast_domain97.html">
+        Change the MTU value for ports in a broadcast domain
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_broadcast_domains97.html">
+        Display broadcast domains
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/delete_a_broadcast_domain97.html">
+        Delete a broadcast domain
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configure failover groups and policies for LIFs</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_failover_groups_and_policies_for_lifs_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_a_failover_group.html">
+        Create a failover group
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_failover_settings_on_a_lif.html">
+        Configure failover settings on a LIF
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/commands_for_managing_failover_groups_and_policies.html">
+        Commands for managing failover groups and policies
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configure subnets (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_subnets_@cluster_administrators_only@_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_a_subnet.html">
+        Create a subnet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_ip_addresses_from_a_subnet.html">
+        Add or remove IP addresses from a subnet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/change_subnet_properties.html">
+        Change subnet properties
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_subnets.html">
+        Display subnets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/delete_a_subnet.html">
+        Delete a subnet
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configure LIFs (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_lifs_@cluster_administrators_only@_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/what_lifs_are.html">
+        What LIFs are
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/lif_roles95.html">
+        LIF roles in ONTAP 9.5 and earlier
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/lifs_and_service_policies96.html">
+        LIFs and service policies
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_lif_service_policies.html">
+        Configure LIF service policies
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_a_lif.html">
+        Create a LIF
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/modify_a_lif.html">
+        Modify a LIF
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/migrate_a_lif.html">
+        Migrate a LIF
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/revert_a_lif_to_its_home_port.html">
+        Revert a LIF to its home port
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/recover_from_an_incorrectly_configured_cluster_lif.html">
+        ONTAP 9.8 or later-Recover from an incorrectly configured cluster LIF
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/delete_a_lif.html">
+        Delete a LIF
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_virtual_ip_@vip@_lifs.html">
+        Configure virtual IP (VIP) LIFs
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configure host-name resolution</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_host-name_resolution_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_dns_for_host-name_resolution.html">
+        Configure DNS for host-name resolution
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/manage_the_hosts_table_@cluster_administrators_only@.html">
+        Manage the hosts table (cluster administrators only)
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Balance network loads to optimize user traffic (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/balance_network_loads_to_optimize_user_traffic_@cluster_administrators_only@_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/what_dns_load_balancing_is.html">
+        What DNS load balancing is
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/how_dns_load_balancing_works.html">
+        How DNS load balancing works
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_a_dns_load_balancing_zone.html">
+        Create a DNS load balancing zone
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/add_or_remove_a_lif_from_a_load_balancing_zone.html">
+        Add or remove a LIF from a load balancing zone
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Secure your network</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_network_security_using_federal_information_processing_standards_@fips@.html">
+        Configure network security using Federal Information Processing Standards (FIPS)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html">
+        Configure IP security (IPsec) over wire encryption
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_firewall_policies_for_lifs.html">
+        Configure firewall policies for LIFs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/commands_for_managing_firewall_service_and_policies.html">
+        Commands for managing firewall service and policies
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configure QoS marking (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_qos_marking_@cluster_administrators_only@_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/dscp_marking_for_uc_compliance.html">
+        DSCP marking for UC compliance
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/modify_qos_marking_values.html">
+        Modify QoS marking values
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_qos_marking_values.html">
+        Display QoS marking values
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage SNMP on the cluster (cluster administrators only)</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/manage_snmp_on_the_cluster_@cluster_administrators_only@_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/what_mibs_are.html">
+        What MIBs are
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/snmp_traps.html">
+        SNMP traps
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_an_snmp_community_and_assigning_it_to_a_lif.html">
+        Create an SNMP community and assign it to a LIF
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_snmpv3_users_in_a_cluster.html">
+        Configure SNMPv3 users in a cluster
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/configure_traphosts_to_receive_snmp_notifications.html">
+        Configure traphosts to receive SNMP notifications
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/commands_for_managing_snmp.html">
+        Commands for managing SNMP
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage routing in an SVM</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/manage_routing_in_an_svm_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/create_a_static_route.html">
+        Create a static route
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/enable_multipath_routing.html">
+        Enable multipath routing
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/delete_a_static_route.html">
+        Delete a static route
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_routing_information.html">
+        Display routing information
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/remove_dynamic_routes_from_routing_tables.html">
+        Remove dynamic routes from routing tables
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ONTAP port usage on a storage system</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/ontap_port_usage_on_a_storage_system_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/network_ports.html">
+        Network ports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/ontap_internal_ports.html">
+        ONTAP internal ports
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> View network information</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/view_network_information_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_network_port_information_@cluster_administrators_only@.html">
+        Display network port information (cluster administrators only)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_information_about_a_vlan_@cluster_administrators_only@.html">
+        Display information about a VLAN (cluster administrators only)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_interface_group_information_@cluster_administrators_only@.html">
+        Display interface group information (cluster administrators only)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_lif_information.html">
+        Display LIF information
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_routing_information_01.html">
+        Display routing information
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_dns_host_table_entries_@cluster_administrators_only@.html">
+        Display DNS host table entries (cluster administrators only)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_dns_domain_configurations.html">
+        Display DNS domain configurations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_information_about_failover_groups.html">
+        Display information about failover groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_lif_failover_targets.html">
+        Display LIF failover targets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_lifs_in_a_load_balancing_zone.html">
+        Display LIFs in a load balancing zone
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_cluster_connections.html">
+        Display cluster connections
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/commands_for_diagnosing_network_problems.html">
+        Commands for diagnosing network problems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/display_network_connectivity_with_neighbor_discovery_protocols.html">
+        Display network connectivity with neighbor discovery protocols
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/networking/get_more_information.html">
+        Get more information
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/high-availability/index.html">
+        <div class="na-navbar-padding"> High availability</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/high-availability/ha_how_hardware-assisted_takeover_works.html">
+        How hardware-assisted takeover works
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/high-availability/ha_how_automatic_takeover_and_giveback_works.html">
+        How automatic takeover and giveback works
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/high-availability/ha_automatic_takeover_commands_overview.html">
+        Automatic takeover commands
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/high-availability/ha_automatic_giveback_commands.html">
+        Automatic giveback commands
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/high-availability/ha_monitor_an_ha_pair_overview.html">
+        Commands for monitoring an HA pair
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/high-availability/ha_commands_for_enabling_and_disabling_storage_failover.html">
+        Commands for enabling and disabling storage failover
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/smbc/index.html">
+        <div class="na-navbar-padding"> SnapMirror Business Continuity</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Introduction</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_intro_overview.html">
+        Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_intro_terminology.html">
+        Key terminology
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_intro_role_of_mediator.html">
+        Role of Mediator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_intro_basic_failover_recovery_concepts.html">
+        Basic failover concepts
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_intro_additional_info.html">
+        Additional information
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Planning</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_plan_prerequisites.html">
+        Prerequisites
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_plan_additional_restrictions_and_limitations.html">
+        Additional restrictions and limitations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_plan_ontap_access_options.html">
+        ONTAP access options
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_plan_preparing_to_use_the_ontap_cli.html">
+        Preparing to use the ONTAP CLI
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_plan_preparing_to_use_the_ontap_mediator.html">
+        Preparing to use the ONTAP Mediator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_plan_summary_of_deployment_best_practices.html">
+        Summary of deployment best practices
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Installation and setup</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_install_high_level_deployment_workflow.html">
+        High level deployment workflow
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_install_installing_the_ontap_mediator.html">
+        Installing the ONTAP Mediator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_install_confirm_the_ontap_cluster_configuration.html">
+        Confirm the ONTAP cluster configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_install_initialize_the_ontap_mediator.html">
+        Initialize the ONTAP Mediator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_install_creating_a_consistency_group_relationship.html">
+        Creating a consistency group relationship
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_install_initializing_a_consistency_group.html">
+        Initializing a consistency group
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_install_mapping_luns_to_the_application_hosts.html">
+        Mapping LUNs to the application hosts
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Administration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_creating_a_common_snapshot_copy.html">
+        Creating a common snapshot copy
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_performing_a_planned_failover.html">
+        Performing a planned failover
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_what_happens_during_an_automatic_unplanned_failover.html">
+        Automatic unplanned failover operations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_monitoring.html">
+        Basic monitoring
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_add_and_remove_volumes_in_consistency_groups.html">
+        Adding and removing volumes in a consistency group
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_converting_existing_relationships_to_smbc.html">
+        Converting existing relationships to SM-BC relationships
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_upgrade_and_revert_considerations.html">
+        SM-BC upgrade and revert considerations
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_removing_an_smbc_configuration.html">
+        Removing an SM-BC configuration
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_admin_removing_ontap_mediator.html">
+        Removing ONTAP Mediator
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Troubleshooting</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_sm_delete_fails_in_takeover_state.html">
+        SnapMirror delete operation fails in takover state
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_failure_creating_snapmirror_relationship.html">
+        Failure creating a SnapMirror relationship and initializing consistency group
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_planned_failover_unsuccessful.html">
+        Planned failover unsuccesful
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_mediator_not_reachable_or_quorum_false.html">
+        Mediator not reachable or Mediator quorum status is false
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_aufo_not_triggered_on_site_b.html">
+        Automatic unplanned failover not triggered on Site B
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_link_between_site_b_and_mediator_down.html">
+        Link between Site B and Mediator down and Site A down
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_link_between_site_a_and_mediator_down.html">
+        Link between Site A to Mediator Down and Site B down
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_sm_delete_fails_when_fence_is_set_on_dest.html">
+        SM-BC SnapMirror delete operation fails when fence is set on destination volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_volume_move_stuck_when_primary_down.html">
+        Volume move operation stuck when primary site is down
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_snapmirror_release_fails.html">
+        SnapMirror release operation fails when unable to delete Snapshot copy
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/smbc/smbc_troubleshoot_vol_move_reference_snapshot_showing_as_newest.html">
+        Volume move reference Snapshot copy shows as the newest
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_san_provision_overview.html">
+        <div class="na-navbar-padding"> Provision SAN storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_san_provision_vmware.html">
+        VMware datastores
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_san_provision_linux.html">
+        Linux servers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_san_provision_windows.html">
+        Windows servers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_san_create_nested_igroup.html">
+        Create nested igroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_san_map_igroups_to_multiple_luns.html">
+        Map igroup to multiple LUNs
+      </a></li><li class="subfolders "><a href="/us-en/ontap/concept_san_smbc_overview.html">
+        <div class="na-navbar-padding"> SnapMirror Business Continuity overview</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_san_configure_mediator.html">
+        Configure Mediator
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_san_configure_protection_for_business_continuity.html">
+        Configure protection for business continuity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_san_reestablish_original_relationship_after_unplanned_failover.html">
+        Reestablish original protection relationship after unplanned failover
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_nvme_provision_overview.html">
+        <div class="na-navbar-padding"> Provision NVMe storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nvme_provision_suse_linux.html">
+        SUSE Linux
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_nas_provision_overview.html">
+        <div class="na-navbar-padding"> Provision NAS storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_provision_vmware.html">
+        VMware datastores
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_provision_home_directories.html">
+        Home directories
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_provision_linux_nfs.html">
+        Linux servers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_provision_export_policies.html">
+        Export policies
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_provision_windows_smb.html">
+        Windows servers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_provision_nfs_and_smb.html">
+        Both Windows and Linux
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_secure_client_access_with_kerberos.html">
+        Secure client access with Kerberos
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_provide_client_access_with_name_services.html">
+        Provide client access with name services
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_provision_flexgroup.html">
+        Large file systems with FlexGroups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_manage_directories_files.html">
+        Manage directories and files
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Monitor volume usage with ONTAP File System Analytics</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/concept_nas_file_system_analytics_overview.html">
+        File System Analytics overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_file_system_analytics_enable.html">
+        Enable File System Analytics
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_file_system_analytics_view.html">
+        View file system activity
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_file_system_analytics_take_corrective_action.html">
+        Take corrective action based on analytics
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_monitor_nfs_active_clients.html">
+        Monitor NFS active clients
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_flexcache.html">
+        Improve performance for multiple clients
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Enable NAS storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_enable_linux_nfs.html">
+        Enable Linux servers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_enable_windows_smb.html">
+        Enable Windows servers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_nas_enable_nfs_and_smb.html">
+        Enable Both Windows and Linux
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_object_provision_overview.html">
+        <div class="na-navbar-padding"> Provision object storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_object_provision_enable_s3_server.html">
+        Enable S3 server
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_object_provision_buckets.html">
+        Provision buckets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_object_provision_add_s3_users_groups.html">
+        Add S3 users and groups
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_object_provision_manage_bucket_access.html">
+        Manage bucket access
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_object_provision_manage_svm_access.html">
+        Manage storage VM access
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_quotas_overview.html">
+        <div class="na-navbar-padding"> Manage resources using quotas</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_quotas_to_limit_resources.html">
+        Limit resource use
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_security_overview.html">
+        <div class="na-navbar-padding"> Maximize security</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_security_mfa_setup.html">
+        Multi-factor authentication
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_security_administrator_access.html">
+        Control administrator access
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_security_encrypt_stored_data_sw.html">
+        Encrypt stored data (software)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_security_encrypt_stored_data_hw.html">
+        Encrypt stored data (hardware)
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_security_file_access_issues.html">
+        Diagnose and correct file access issues
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_dp_overview.html">
+        <div class="na-navbar-padding"> Protect data</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_create_custom_data_protection_policies.html">
+        Create custom data protection policies
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_configure_snapshot.html">
+        Configure Snapshot copies
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_recover_snapshot.html">
+        Recover from Snapshot copies
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_prepare_mirror.html">
+        Prepare for mirroring and vaulting
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_configure_mirror.html">
+        Configure mirrors and vaults
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_configure_storage_vm_dr.html">
+        Configure storage VM disaster recovery
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_serve_data_from_destination.html">
+        Serve data from a destination
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_restore_from_destination.html">
+        Resynchronize a protection relationship
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_restore_from_vault.html">
+        Restore a volume from an earlier Snapshot copy
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_restore_to_new_volume.html">
+        Restore to a new volume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_reverse_resynch_a_destination_vm.html">
+        Reverse resynchronize a protection relationship
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_reactivate_storage_vm.html">
+        Reactivate a source storage VM
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_resynch_a_destination_vm.html">
+        Resynchronize a destination storage VM
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_dp_back_up_to_cloud.html">
+        Back up to the cloud
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_cloud_overview.html">
+        <div class="na-navbar-padding"> Extend to the cloud</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_add_connection_to_cloud.html">
+        Add a connection to the cloud
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cloud_tier_data.html">
+        Tier data to the cloud
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cloud_local_bucket_tier_data.html">
+        Tier data to local bucket
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cloud_create_tiering_object_tags.html">
+        Create tiering object tags
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cloud_enable_inactive_data_reporting.html">
+        Enable inactive data reporting
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cloud_backup_data_using_cbs.html">
+        Back up data using the Cloud Backup Service
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cloud_manage_connection_to_cbs.html">
+        Manage the connections to the Cloud Backup Service
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_cluster_performance_overview.html">
+        <div class="na-navbar-padding"> View cluster performance</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cp_dashboard_tour.html">
+        Dashboard tour
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cp_id_hot_objects.html">
+        Identify hot objects
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cp_monitor_cluster_performance_sm.html">
+        Monitor cluster performance using System Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cp_monitor_cluster_performance_um.html">
+        Monitor cluster performance with Unified Manager
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_cp_monitor_cluster_performance_ci.html">
+        Monitor cluster performance with Cloud Insights
+      </a></li></ul></li><li class="subfolders "><a href="/us-en/ontap/concept_administration_overview.html">
+        <div class="na-navbar-padding"> Day-to-day administration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_search_filter_sort.html">
+        Search, filter, and sort
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_enable_new_features.html">
+        Enable new features
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_manage_nodes.html">
+        Manage nodes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_troubleshoot_hardware_problems.html">
+        View hardware configurations and determine problems
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_view_submit_support_cases.html">
+        View and submit support cases
+      </a></li><li class="subfolders "><a href="/us-en/ontap/concept_metrocluster_manage_nodes.html">
+        <div class="na-navbar-padding"> Manage MetroCluster sites</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_metrocluster_setup.html">
+        Set up a MetroCluster site
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_metrocluster_peering.html">
+        Set up MetroCluster peering
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_metrocluster_configure.html">
+        Configure a MetroCluster site
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_metrocluster_switchover_switchback.html">
+        Perform MetroCluster switchover and switchback
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_metrocluster_troubleshooting.html">
+        Troubleshoot problems with a MetroCluster
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_clone_data.html">
+        Clone data
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_modify_qos.html">
+        Modify QoS
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_update_firmware.html">
+        Update firmware
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Manage storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/concept_capacity_measurements_in_sm.html">
+        Capacity measurements
+      </a></li><li class="subfolders "><a href="/us-en/ontap/task_admin_expand_storage.html">
+        <div class="na-navbar-padding"> Expand storage</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_add_disks_to_local_tier.html">
+        Disks
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_add_nodes_to_cluster.html">
+        Nodes
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_manage_storage_efficiency_policies.html">
+        Manage storage efficiency policies
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_recover_deleted_volumes.html">
+        Recover deleted volumes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_save_storage_space.html">
+        Save storage space
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_balance_load_by_moving_luns.html">
+        Balance load by moving LUNs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_balance_load_by_moving_volumes.html">
+        Balance loads by moving volumes to another tier
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_admin_use_ansible_playbooks_add_edit_volumes_luns.html">
+        Use Ansible Playbooks to add or edit volumes or LUNs
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Rest API</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/concept_rest_overview.html">
+        Rest log overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/task_rest_access_log.html">
+        Access the REST API log
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/concept_get_more_information.html">
+        Get more information
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/ontap/reference_legal_notices.html">
+        Notices
+      </a></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      
+
+
+
+<div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Removing a NIC from the node on ONTAP 9.8 or later</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-04-27 20:31:30 +0000">04/27/2021</time>
+    
+  
+
+
+  <span>
+    <a target="_blank" href="/us-en/ontap/pdfs/pages/networking/removing_a_nic_from_the_node.pdf" role="button">
+      <img src="/us-en/ontap/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
+  </span>
+
+
+</p>
+
+
+<div class="paragraph lead">
+<p>This topic applies to ONTAP 9.8 or later. You might have to remove a faulty NIC from its slot or move the NIC to another slot for maintenance purposes.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Power down the node.</p>
+</li>
+<li>
+<p>Physically remove the NIC from its slot.</p>
+</li>
+<li>
+<p>Power on the node.</p>
+</li>
+<li>
+<p>Verify that the port has been deleted:</p>
+<div class="literalblock">
+<div class="content">
+<pre>network port show</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+ONTAP automatically removes the port from any interface groups. If the port was the only member of an interface group, the interface group is deleted.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>If the port had any VLANs configured on it, they are displaced. You can view displaced VLANs using the following command:</p>
+<div class="literalblock">
+<div class="content">
+<pre>cluster controller-replacement network displaced-vlans show</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>displaced-interface show</code>, <code>displaced-vlans show</code>, and <code>displaced-vlans restore</code> commands are unique and do not require the fully qualified command name, which starts with <code>cluster controller-replacement network</code>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>These VLANs are deleted, but can be restored using the following command:</p>
+<div class="literalblock">
+<div class="content">
+<pre>displaced-vlans restore</pre>
+</div>
+</div>
+</li>
+<li>
+<p>If the port had any LIFs configured on it, ONTAP automatically chooses new home ports for those LIFs on another port in the same broadcast domain. If no suitable home port is found on the same filer, those LIFs are considered displaced. You can view displaced LIFs using the following command:</p>
+<div class="paragraph">
+<p><code>displaced-interface show</code></p>
+</div>
+</li>
+<li>
+<p>When a new port is added to the broadcast domain on the same node, the home ports for the LIFs are automatically restored. Alternatively, you can either set the home port using <code>network interface modify -home-port -home-node or use the displaced- interface restore</code> command.</p>
+</li>
+</ol>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">CONTRIBUTE</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap/blob/main/networking/removing_a_nic_from_the_node.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap/issues/new?body=Page%3A%20[Removing a NIC from the node on ONTAP 9.8 or later](https://docs.netapp.com/us-en/ontap/networking/removing_a_nic_from_the_node.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">ON THIS PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/ontap/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Have feedback for our website?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">Let us know</a>
+  <a href="https://docs.netapp.com/us-en/announcements/" class="n-footer__copyright">Announcements</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/us-en/ontap/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/us-en/ontap/js/prism.js'></script>
+      <script type="text/javascript" src='/us-en/ontap/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/us-en/ontap/js/www-ntap.js'></script>
+  </body>
+
+  
+</html>

@@ -1,0 +1,3042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/add_or_remove_a_lif_from_a_load_balancing_zone.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/add_or_remove_ip_addresses_from_a_subnet.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/add_or_remove_ports_from_a_broadcast_domain97.html</loc>
+      
+      <lastmod>2021-04-28T23:54:34+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/balance_network_loads_to_optimize_user_traffic_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/balance_network_loads_to_optimize_user_traffic_@cluster_administrators_only@_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/change_subnet_properties.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/change_the_mtu_value_for_ports_in_a_broadcast_domain.html</loc>
+      
+      <lastmod>2021-04-28T12:53:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/change_the_mtu_value_for_ports_in_a_broadcast_domain97.html</loc>
+      
+      <lastmod>2021-04-28T12:53:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/commands_for_diagnosing_network_problems.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/commands_for_managing_failover_groups_and_policies.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/commands_for_managing_firewall_service_and_policies.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/commands_for_managing_snmp.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/concept_additional_system_configuration_tasks_to_complete.html</loc>
+      
+      <lastmod>2021-05-06T15:55:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_admin_downloading_data_report.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_admin_viewing_managing_network.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_administration_overview.html</loc>
+      
+      <lastmod>2021-05-04T23:36:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_capacity_measurements_in_sm.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_cloud_overview.html</loc>
+      
+      <lastmod>2021-05-05T18:12:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_cluster_performance_overview.html</loc>
+      
+      <lastmod>2021-05-07T13:02:32+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/concept_consideration_for_reverting_systems_with_snapmirror_synchronous_relationships.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/concept_decide_whether_to_use_ontap_cli.html</loc>
+      
+      <lastmod>2021-05-03T19:47:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_dp_overview.html</loc>
+      
+      <lastmod>2021-05-04T18:03:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_get_more_information.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_how_firmware_is_updated_during_upgrade.html</loc>
+      
+      <lastmod>2021-05-25T18:47:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_how_to_plan_upgrade.html</loc>
+      
+      <lastmod>2021-05-13T01:15:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/concept_how_to_send_comments_about_documentation_and_receive_update_notifications_netapp_post_preface.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_key_ontap.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_metrocluster_manage_nodes.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_nas_file_system_analytics_overview.html</loc>
+      
+      <lastmod>2021-05-21T11:56:13+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_nas_provision_overview.html</loc>
+      
+      <lastmod>2021-05-04T23:36:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html</loc>
+      
+      <lastmod>2021-05-04T17:39:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_object_provision_overview.html</loc>
+      
+      <lastmod>2021-05-04T17:39:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/concept_pre_revert_checks.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_pre_upgrade_checks.html</loc>
+      
+      <lastmod>2021-05-26T18:35:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_quotas_overview.html</loc>
+      
+      <lastmod>2021-05-04T17:39:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_rest_overview.html</loc>
+      
+      <lastmod>2021-05-07T16:29:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/concept_reversion_requirements_for_snapmirror_and_snapvault_relationships.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/concept_revert_paths.html</loc>
+      
+      <lastmod>2021-05-06T19:08:13+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/concept_revert_process_considerations.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_san_provision_overview.html</loc>
+      
+      <lastmod>2021-05-04T17:39:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_san_smbc_overview.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_security_overview.html</loc>
+      
+      <lastmod>2021-05-05T18:12:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/concept_set_up_the_cluster.html</loc>
+      
+      <lastmod>2021-05-05T21:12:34+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_special_configurations_post_checks.html</loc>
+      
+      <lastmod>2021-04-28T23:54:34+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/concept_support_of_sp_firmware_automatic_revert.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_considerations_for_root_data_partitioning.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_considerations_for_snaplock.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_methods.html</loc>
+      
+      <lastmod>2021-05-12T20:49:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_paths.html</loc>
+      
+      <lastmod>2021-05-12T23:58:34+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_requirements_for_metrocluster_configurations.html</loc>
+      
+      <lastmod>2021-04-30T18:00:59+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_upgrade_requirements_for_snapmirror.html</loc>
+      
+      <lastmod>2021-04-30T19:14:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_verify_svm_routing.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/concept_when_to_call_technical_support.html</loc>
+      
+      <lastmod>2021-05-26T18:37:04+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/concept_when_you_need_to_update_the_disk_qualification_package.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_broadcast_domains_97.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_broadcast_domains_97_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_broadcast_domains_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_broadcast_domains_@cluster_administrators_only@_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_dns_for_host-name_resolution.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_auto.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_dns_services_manual.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_dynamic_dns_services.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_failover_groups_and_policies_for_lifs_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_failover_settings_on_a_lif.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_firewall_policies_for_lifs.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_host-name_resolution.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_host-name_resolution_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_ipspaces_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_ipspaces_@cluster_administrators_only@_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_lif_service_policies.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_lifs_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_lifs_@cluster_administrators_only@_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_network_ports_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_network_ports_@cluster_administrators_only@_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_network_security_using_federal_information_processing_standards_@fips@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_qos_marking_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_qos_marking_@cluster_administrators_only@_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_snmpv3_users_in_a_cluster.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_subnets_@cluster_administrators_only@_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_traphosts_to_receive_snmp_notifications.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_virtual_ip_@vip@_lifs.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/configure_vlans_over_physical_ports.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/convert_40gbe_nic_ports_into_multiple_10gbe_ports_for_10gbe_connectivity.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_broadcast_domain.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_broadcast_domain97.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_broadcast_domain_reference.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_dns_load_balancing_zone.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_failover_group.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_static_route.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_subnet.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_a_subnet_reference.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_an_snmp_community_and_assigning_it_to_a_lif.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_ipspaces.html</loc>
+      
+      <lastmod>2021-04-28T12:53:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_ipspaces_01.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_lifs.html</loc>
+      
+      <lastmod>2021-04-28T12:28:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/create_svms.html</loc>
+      
+      <lastmod>2021-04-28T12:53:45+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/decide_whether_to_use_this_network_management_guide_auto.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/decide_whether_to_use_this_network_management_guide-manual.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/decide_whether_to_use_this_network_management_guide_reference.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_broadcast_domain.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_broadcast_domain97.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_lif.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_static_route.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/delete_a_subnet.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/delete_an_ipspace.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/determine_which_ports_can_be_used_for_a_broadcast_domains.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_broadcast_domains.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_broadcast_domains97.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_cluster_connections.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_dns_domain_configurations.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_dns_host_table_entries_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_information_about_a_vlan_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_information_about_failover_groups.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_interface_group_information_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_ipspaces.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_lif_failover_targets.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_lif_information.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_lifs_in_a_load_balancing_zone.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_network_connectivity_with_neighbor_discovery_protocols.html</loc>
+      
+      <lastmod>2021-05-07T13:13:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_network_port_information_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_qos_marking_values.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_routing_information.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_routing_information_01.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/display_subnets.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/dscp_marking_for_uc_compliance.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/enable_multipath_routing.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/example_of_using_broadcast_domains.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/example_of_using_broadcast_domains_97.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/example_of_using_ipspaces.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/get_more_information.html</loc>
+      
+      <lastmod>2021-04-28T12:28:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/add_connection_to_cloud.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/capacity_measurements.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_capacity_measurements.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/concept_rest_api.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_expand_volumes_and_luns.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_upgrade_ontap.html</loc>
+      
+      <lastmod>2021-05-13T20:41:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_restore_from_cloud.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_root_data_partitioning.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_local_bucket_tier_data.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_metrocluster_ANDU_upgrade.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nvme_provision_vmware.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_use_ansible_playbooks_add_edit_volumes_luns.html</loc>
+      
+      <lastmod>2021-05-13T19:42:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/high-availability/ha_automatic_giveback_commands.html</loc>
+      
+      <lastmod>2021-05-04T18:53:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/high-availability/ha_automatic_takeover_commands_overview.html</loc>
+      
+      <lastmod>2021-05-04T18:53:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/high-availability/ha_commands_for_enabling_and_disabling_storage_failover.html</loc>
+      
+      <lastmod>2021-04-30T17:49:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/high-availability/ha_how_automatic_takeover_and_giveback_works.html</loc>
+      
+      <lastmod>2021-05-04T18:53:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/high-availability/ha_how_hardware-assisted_takeover_works.html</loc>
+      
+      <lastmod>2021-05-04T19:09:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/high-availability/ha_monitor_an_ha_pair_overview.html</loc>
+      
+      <lastmod>2021-05-03T16:46:13+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/how_dns_load_balancing_works.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/</loc>
+      
+      <lastmod>2021-05-06T15:36:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/</loc>
+      
+      <lastmod>2021-05-05T17:50:04+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/high-availability/</loc>
+      
+      <lastmod>2021-05-07T13:00:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/</loc>
+      
+      <lastmod>2021-05-12T21:06:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/</loc>
+      
+      <lastmod>2021-05-06T19:08:13+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/</loc>
+      
+      <lastmod>2021-05-12T20:49:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/lif_roles95.html</loc>
+      
+      <lastmod>2021-04-28T23:54:34+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/lifs_and_service_policies96.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/manage_routing_in_an_svm.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/manage_routing_in_an_svm_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/manage_snmp_on_the_cluster_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/manage_snmp_on_the_cluster_@cluster_administrators_only@_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/manage_the_hosts_table_@cluster_administrators_only@.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/merge_broadcast_domains.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/merge_broadcast_domains97.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/migrate_a_lif.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/modify_a_lif.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/modify_mtu_setting_for_interface_group_ports.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/modify_network_port_attributes.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/modify_qos_marking_values.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/monitor_the_health_of_network_ports.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/monitor_the_reachability_of_network_ports.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/move_broadcast_domains.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/network_cabling_guidelines.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/network_features_by_release.html</loc>
+      
+      <lastmod>2021-05-08T13:11:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/network_ports.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/networking_components_of_a_cluster.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/networking_components_of_a_cluster_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/networking_reference.html</loc>
+      
+      <lastmod>2021-05-05T17:50:04+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/ontap_internal_ports.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/ontap_port_usage_on_a_storage_system.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/ontap_port_usage_on_a_storage_system_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/recover_from_an_incorrectly_configured_cluster_lif.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/reference_commands_for_managing_ntp_servers.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/reference_copyright.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/reference_legal_notices.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/reference_the_cluster_setup_worksheet.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/reference_trademark.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/register_active_iq.html</loc>
+      
+      <lastmod>2021-05-17T20:56:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/relationship_between_broadcast_domains.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/remove_a_nic_from_the_node_97.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/remove_dynamic_routes_from_routing_tables.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/remove_ports_from_a_broadcast_domain.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/removing_a_nic_from_the_node.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/repair_port_reachability.html</loc>
+      
+      <lastmod>2021-05-08T13:11:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/revert_a_lif_to_its_home_port.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/search.html</loc>
+      
+      <lastmod>2021-05-31T05:19:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/search.html</loc>
+      
+      <lastmod>2021-05-31T05:19:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/high-availability/search.html</loc>
+      
+      <lastmod>2021-05-31T05:19:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/search.html</loc>
+      
+      <lastmod>2021-05-31T05:19:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/search.html</loc>
+      
+      <lastmod>2021-05-31T05:19:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/search.html</loc>
+      
+      <lastmod>2021-05-31T05:19:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap//search.html</loc>
+      
+      <lastmod>2021-05-31T05:19:07+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/secure_your_network.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/set_up_nas_path_failover_98_and_later_cli.html</loc>
+      
+      <lastmod>2021-05-08T13:11:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/set_up_nas_path_failover_9_to_97_cli.html</loc>
+      
+      <lastmod>2021-05-05T05:02:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_add_and_remove_volumes_in_consistency_groups.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_converting_existing_relationships_to_smbc.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_creating_a_common_snapshot_copy.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_monitoring.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_performing_a_planned_failover.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_removing_an_smbc_configuration.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_removing_ontap_mediator.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_upgrade_and_revert_considerations.html</loc>
+      
+      <lastmod>2021-05-06T17:05:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_admin_what_happens_during_an_automatic_unplanned_failover.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_install_confirm_the_ontap_cluster_configuration.html</loc>
+      
+      <lastmod>2021-05-06T17:05:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_install_creating_a_consistency_group_relationship.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_install_high_level_deployment_workflow.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_install_initialize_the_ontap_mediator.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_install_initializing_a_consistency_group.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_install_installing_the_ontap_mediator.html</loc>
+      
+      <lastmod>2021-05-12T20:49:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_install_mapping_luns_to_the_application_hosts.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_intro_additional_info.html</loc>
+      
+      <lastmod>2021-05-06T17:05:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_intro_basic_failover_recovery_concepts.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_intro_overview.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_intro_role_of_mediator.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_intro_terminology.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_additional_restrictions_and_limitations.html</loc>
+      
+      <lastmod>2021-05-04T18:22:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_ontap_access_options.html</loc>
+      
+      <lastmod>2021-05-06T17:05:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_preparing_to_use_the_ontap_cli.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_preparing_to_use_the_ontap_mediator.html</loc>
+      
+      <lastmod>2021-05-06T17:05:50+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_summary_of_deployment_best_practices.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_aufo_not_triggered_on_site_b.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_failure_creating_snapmirror_relationship.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_link_between_site_a_and_mediator_down.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_link_between_site_b_and_mediator_down.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_mediator_not_reachable_or_quorum_false.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_planned_failover_unsuccessful.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_sm_delete_fails_in_takeover_state.html</loc>
+      
+      <lastmod>2021-05-04T18:22:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_sm_delete_fails_when_fence_is_set_on_dest.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_snapmirror_release_fails.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_vol_move_reference_snapshot_showing_as_newest.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/smbc/smbc_troubleshoot_volume_move_stuck_when_primary_down.html</loc>
+      
+      <lastmod>2021-04-29T18:11:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/snmp_traps.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/split_broadcast_domains.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/split_broadcast_domains97.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_add_connection_to_cloud.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_add_cache_to_local_tier.html</loc>
+      
+      <lastmod>2021-05-20T13:50:03+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_add_disks_to_local_tier.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_add_nodes_to_cluster.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_balance_load_by_moving_luns.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_balance_load_by_moving_volumes.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_clone_data.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_expand_storage.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_manage_nodes.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_manage_storage_efficiency_policies.html</loc>
+      
+      <lastmod>2021-02-18T21:33:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_modify_qos.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_recover_deleted_volumes.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_save_storage_space.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_troubleshoot_hardware_problems.html</loc>
+      
+      <lastmod>2021-05-20T18:10:33+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_update_firmware.html</loc>
+      
+      <lastmod>2021-05-04T20:53:01+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_use_ansible_playbooks_add_edit_volumes_luns.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_admin_view_submit_support_cases.html</loc>
+      
+      <lastmod>2021-05-04T20:11:34+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_check_cluster_with_config_advisor.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_check_for_common_configuration_errors_using_config_advisor.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cloud_backup_data_using_cbs.html</loc>
+      
+      <lastmod>2021-05-05T18:05:23+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cloud_create_tiering_object_tags.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cloud_enable_inactive_data_reporting.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cloud_local_bucket_tier_data.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cloud_manage_connection_to_cbs.html</loc>
+      
+      <lastmod>2021-05-04T20:11:34+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cloud_tier_data.html</loc>
+      
+      <lastmod>2021-02-05T19:06:04+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_configure_important_ems_events_to_forward_notifications_to_a_syslog_server.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_configure_important_ems_events_to_send_email_notifications.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_configure_ontap.html</loc>
+      
+      <lastmod>2021-05-07T12:58:52+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_configure_snmp_traphosts_to_receive_event_notifications.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_configuring_ldap_clients_to_use_tls_for_highest_security.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cp_dashboard_tour.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cp_id_hot_objects.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cp_monitor_cluster_performance_ci.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cp_monitor_cluster_performance_sm.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_cp_monitor_cluster_performance_um.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_create_an_svm_using_ontap_template.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_create_the_cluster_on_the_first_node.html</loc>
+      
+      <lastmod>2021-05-03T19:47:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_decide_where_to_send_important_event_notifications.html</loc>
+      
+      <lastmod>2021-05-07T13:11:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_disable_asuo.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_disabling_qtrees_in_flexgroup_volumes_before_reverting.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_download_and_install_ontap_software_image.html</loc>
+      
+      <lastmod>2021-05-26T15:51:44+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_download_and_install_ontap_software_image.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_back_up_to_cloud.html</loc>
+      
+      <lastmod>2021-04-30T01:39:00+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_configure_mirror.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_configure_snapshot.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_configure_storage_vm_dr.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_create_custom_data_protection_policies.html</loc>
+      
+      <lastmod>2021-04-01T23:27:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_prepare_mirror.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_reactivate_storage_vm.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_recover_snapshot.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_restore_from_destination.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_restore_from_vault.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_restore_to_new_volume.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_resynch_a_destination_vm.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_reverse_resynch_a_destination_vm.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_dp_serve_data_from_destination.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_enabling_and_reverting_lifs_to_home_ports_completing_post_reversion_tasks.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_post_upgrade.html</loc>
+      
+      <lastmod>2021-05-12T20:49:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_preparing_the_ontap_software_for_the_update.html</loc>
+      
+      <lastmod>2021-04-30T18:00:59+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_enabling_automatic_switchover_for_metrocluster_configurations.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_enforcing_sha_2_on_user_account_passwords_dot_9_0_upgrade_guide.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_identifying_and_moving_cifs_servers_in_workgroup_mode.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_identifying_current_cluster_activity.html</loc>
+      
+      <lastmod>2021-04-30T19:14:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_identifying_current_cluster_activity.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_join_remaining_nodes_to_the_cluster.html</loc>
+      
+      <lastmod>2021-05-06T15:55:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_metrocluster_configure.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_metrocluster_peering.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_metrocluster_setup.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_metrocluster_switchover_switchback.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_metrocluster_troubleshooting.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_enable_linux_nfs.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_enable_nfs_and_smb.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_enable_windows_smb.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_file_system_analytics_enable.html</loc>
+      
+      <lastmod>2020-12-04T19:06:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_file_system_analytics_take_corrective_action.html</loc>
+      
+      <lastmod>2021-05-03T12:18:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_file_system_analytics_view.html</loc>
+      
+      <lastmod>2021-05-03T12:18:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_flexcache.html</loc>
+      
+      <lastmod>2021-03-02T00:00:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_manage_directories_files.html</loc>
+      
+      <lastmod>2021-05-03T12:38:44+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_monitor_nfs_active_clients.html</loc>
+      
+      <lastmod>2020-12-04T19:06:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_provide_client_access_with_name_services.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_export_policies.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_flexgroup.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_home_directories.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_linux_nfs.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_nfs_and_smb.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_vmware.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_provision_windows_smb.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nas_secure_client_access_with_kerberos.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_nvme_provision_suse_linux.html</loc>
+      
+      <lastmod>2021-05-07T16:29:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_object_provision.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_object_provision_add_s3_users_groups.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_object_provision_buckets.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_object_provision_enable_s3_server.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_object_provision_manage_bucket_access.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_object_provision_manage_svm_access.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_plan_with_upgrade_advisor.html</loc>
+      
+      <lastmod>2021-05-13T01:22:21+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_plan_without_upgrade_advisor.html</loc>
+      
+      <lastmod>2021-05-13T15:15:55+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_all_load_sharing_mirrors_for_a_major_upgrade.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_snapmirror_relationships_for_a_nondisruptive_upgrade_or_downgrade.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_preparing_snapshot_copies_after_reverting.html</loc>
+      
+      <lastmod>2021-05-26T16:43:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_preparing_snapshot_copies_before_reverting.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_preparing_to_upgrade_nodes_using_netapp_storage_encryption_with_external_key_management_servers.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_quiesce_snapmirror_relationships_before_downgrade.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_quotas_to_limit_resources.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_reconfiguring_kmip_servers_connections_after_upgrading_to_ontap_9_3_or_later.html</loc>
+      
+      <lastmod>2021-05-07T14:20:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_relocating_moved_load_sharing_mirror_source_volumes.html</loc>
+      
+      <lastmod>2021-05-07T14:20:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_requesting_notification_of_issues_encountered_in_nondisruptive_upgrades.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_rest_access_log.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_resuming_an_upgrade_after_an_error_in_the_automated_upgrade_process.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_resuming_an_upgrade_using_the_cli_after_an_error_in_the_automated_upgrade_process.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_resuming_snapmirror_operations.html</loc>
+      
+      <lastmod>2021-05-07T14:20:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_reverting_an_ontap_cluster.html</loc>
+      
+      <lastmod>2021-05-26T16:57:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_reverting_password_hash_function.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_reverting_systems_with_deduplicated_volumes.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_reverting_the_physical_block_sharing_in_split_flexclone_volumes.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_reviewing_pre_reversion_resources.html</loc>
+      
+      <lastmod>2021-04-28T19:08:46+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_reviewing_pre_update_resources.html</loc>
+      
+      <lastmod>2021-05-26T15:42:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_san_configure_mediator.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_san_configure_protection_for_business_continuity.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_san_create_nested_igroup.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_san_map_igroups_to_multiple_luns.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_san_provision_linux.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_san_provision_vmware.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_san_provision_windows.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_san_reestablish_original_relationship_after_unplanned_failover.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_security_encrypt_stored_data_hw.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_security_encrypt_stored_data_sw.html</loc>
+      
+      <lastmod>2021-05-07T15:56:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_security_file_access_issues.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/task_security_mfa_setup.html</loc>
+      
+      <lastmod>2020-11-07T22:54:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_setting_autocommit_periods_for_snaplock_volumes_before_reverting.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_setting_the_desired_nt_acl_permissions_display_level_for_nfs_clients.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/software_setup/task_synchronize_the_system_time_across_the_cluster.html</loc>
+      
+      <lastmod>2021-05-06T15:55:12+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_things_to_verify_after_downgrade_revert.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_things_to_verify_before_revert.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_updating_a_four_or_eight_node_mcc.html</loc>
+      
+      <lastmod>2021-05-12T20:49:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_updating_a_two_node_metrocluster_configuration_in_ontap_9_2_and_earlier.html</loc>
+      
+      <lastmod>2021-05-06T15:17:22+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_updating_an_ontap_cluster_disruptively.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_cli.html</loc>
+      
+      <lastmod>2021-05-05T15:04:25+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_disruptive_automated_cli.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_nondisruptive_manual_cli.html</loc>
+      
+      <lastmod>2021-05-06T15:11:49+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verify_cluster_after_upgrade.html</loc>
+      
+      <lastmod>2021-05-12T20:49:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_verify_health.html</loc>
+      
+      <lastmod>2021-05-07T13:41:19+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verify_status.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_verifying_client_access_cifs_and_nfs.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_cluster_health_verifying_that_the_cluster_is_ready.html</loc>
+      
+      <lastmod>2021-05-07T14:20:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_cluster_upgrade_limits.html</loc>
+      
+      <lastmod>2021-04-30T19:14:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_verifying_ipv6_firewall_entries.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/revert/task_verifying_storage_health_before_revert.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_storage_health_verifying_that_the_cluster_is_ready.html</loc>
+      
+      <lastmod>2021-04-30T18:00:59+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_that_deduplicated_volumes_and_aggregates_contain_sufficient_free_space.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_that_the_netgroup_file_is_present_on_all_nodes.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_the_lif_failover_configuration.html</loc>
+      
+      <lastmod>2021-05-06T14:42:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_the_networking_and_storage_status_for_metrocluster_cluster_is_ready.html</loc>
+      
+      <lastmod>2021-05-12T20:49:28+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_the_networking_and_storage_status_for_metrocluster_post_upgrade.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_the_san_configuration.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_the_san_configuration_after_an_upgrade.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_verifying_your_network_configuration_after_upgrade.html</loc>
+      
+      <lastmod>2021-05-07T14:20:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_what_to_check_before_upgrade.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_what_to_do_after_upgrade.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/upgrade/task_what_to_verify_before_upgrade.html</loc>
+      
+      <lastmod>2021-04-27T21:13:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/types_of_network_ports.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/upgrade_considerations.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/verify_your_network_configuration.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/view_network_information.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/view_network_information_overview.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/what_dns_load_balancing_is.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/what_lifs_are.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/what_mibs_are.html</loc>
+      
+      <lastmod>2021-04-27T20:31:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/workflow__nas_path_failover_auto.html</loc>
+      
+      <lastmod>2021-04-27T18:32:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/workflow__nas_path_failover_manual.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/workflow__nas_path_failover_overview_auto.html</loc>
+      
+      <lastmod>2021-04-29T00:21:30+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/workflow__nas_path_failover_overview_manual.html</loc>
+      
+      <lastmod>2021-04-27T18:34:54+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/worksheet_for_nas_path_failover_configuration_auto.html</loc>
+      
+      <lastmod>2021-05-08T13:11:18+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/ontap/networking/worksheet_for_nas_path_failover_configuration_manual.html</loc>
+      
+      <lastmod>2021-04-28T22:43:58+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
