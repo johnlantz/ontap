@@ -121,6 +121,10 @@ a|data-cifs
 a|-
 a|data-only
 a|Protocols related to CIFS data service
+a|data-s3-server
+a|-
+a|data-only
+a|Protocols related to S3 data service
 a|data-flexcache
 a|-
 a|data-only
